@@ -13,7 +13,7 @@ module Ffprober
         @parse_version = T.let(nil, T.nilable(T::Array[Integer]))
       end
 
-      VERSION_REGEX = T.let(/^(ffprobe|avprobe|ffmpeg) version (n?\d+)\.?(\d+)\.?(\d+)*/.freeze, Regexp)
+      VERSION_REGEX = /^(ffprobe|avprobe|ffmpeg) version n?(\d+)\.?(\d+)\.?(\d+)*/
       NIGHTLY_REGEX = T.let(/^(ffprobe|avprobe|ffmpeg) version (N|git)-/.freeze, Regexp)
       VERSION_FALLBACK = T.let([0, 0, 0].freeze, T::Array[Integer])
 
